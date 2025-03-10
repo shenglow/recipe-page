@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+hr,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+:root {
+  --white: #ffffff;
+  --rose-800: #7a284e;
+  --rose-50: #fff7fb;
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
+  --brown-800: #854632;
+  --font-family-primary: "Young Serif", serif;
+  --font-family-secondary: "Outfit", sans-serif;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-header1: 40px;
+  --font-header2: 28px;
+  --font-header3: 20px;
+  --font-body1: 16px;
+  --font-header-line-height: 1;
+  --font-body-line-height: 1.5;
+  --spacing-xs: 8px;
+  --spacing-s: 12px;
+  --spacing: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-xxxl: 48px;
+  --spacing-gigantic: 128px;
+  --border-radius: 12px;
+  --border-radius-l: 24px;
+}
+
+body {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-body1);
+  font-weight: var(--font-regular);
+  color: var(--stone-600);
+  line-height: 1.5;
+  background-color: var(--stone-100);
+}
+body h1 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-header1);
+  font-weight: var(--font-regular);
+  line-height: 1;
+}
+body h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-header2);
+  font-weight: var(--font-regular);
+  line-height: 1;
+}
+body h3 {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-header3);
+  font-weight: var(--font-semi-bold);
+  line-height: 1;
+}
+
+ul,
+ol {
+  padding: 0;
+  padding-left: 24px;
+}
+ul li {
+  padding-left: var(--spacing);
+}
+ul li:not(:last-child) {
+  margin-bottom: var(--spacing-xs);
+}
+ul li::marker {
+  font-size: 16px;
+  color: var(--brown-800);
+  line-height: 1;
+}
+ol li {
+  padding-left: var(--spacing);
+}
+ol li:not(:last-child) {
+  margin-bottom: var(--spacing-xs);
+}
+ol li::marker {
+  font-size: 16px;
+  color: var(--brown-800);
+  line-height: 1.5;
+  font-weight: var(--font-bold);
+}
+
+main {
+  margin: var(--spacing-gigantic) auto;
+  padding: var(--spacing-xxl);
+  border-radius: var(--border-radius-l);
+  max-width: 736px;
+  background-color: var(--white);
+}
+.top-image {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 300px;
+}
+.text-content {
+  margin-top: var(--spacing-xxl);
+}
+.text-content > *:not(:last-child) {
+  margin-bottom: var(--spacing-xl);
+}
+.text-content > hr {
+  border-color: var(--stone-150);
+  border-bottom: none;
+}
+.text-content .title h1 {
+  color: var(--stone-900);
+  margin-bottom: var(--spacing-l);
+}
+.text-content .preparation {
+  padding: var(--spacing-l);
+  background-color: var(--rose-50);
+  border-radius: var(--border-radius);
+}
+.text-content .preparation h3 {
+  color: var(--rose-800);
+  margin-bottom: var(--spacing);
+}
+.text-content .ingredients h2 {
+  color: var(--brown-800);
+  margin-bottom: var(--spacing-l);
+}
+.text-content .instructions h2 {
+  color: var(--brown-800);
+  margin-bottom: var(--spacing-l);
+}
+.text-content .nutrition h2 {
+  color: var(--brown-800);
+  margin-bottom: var(--spacing-l);
+}
+.text-content .nutrition p {
+  margin-bottom: var(--spacing-l);
+}
+.text-content .nutrition dl {
+  display: flex;
+  padding: 0 var(--spacing-xl);
+}
+.text-content .nutrition dl > * {
+  flex: 1;
+}
+.text-content .nutrition dt {
+  margin-right: var(--spacing);
+}
+.text-content .nutrition dd {
+  font-weight: var(--font-bold);
+  color: var(--brown-800);
+}
+.text-content .nutrition > hr {
+  border-color: var(--stone-150);
+  border-bottom: none;
+  margin: var(--spacing-s) 0;
+}
+
+footer {
+  margin-bottom: var(--spacing);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: var(--spacing);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 616px;
+    padding: var(--spacing-xxl);
+  }
+}
+
+@media (max-width: 616px) {
+  :root {
+    --font-header1: 36px;
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+  .top-image {
+    border-radius: 0;
+    height: 171px;
+  }
+  .text-content {
+    margin-top: 0;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+  }
+}
