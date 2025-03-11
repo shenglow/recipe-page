@@ -128,8 +128,8 @@ main {
   margin-bottom: var(--spacing-xl);
 }
 .text-content > hr {
-  border-color: var(--stone-150);
-  border-bottom: none;
+  border: 1px solid var(--stone-150);
+  border-bottom: 0;
 }
 .text-content .title h1 {
   color: var(--stone-900);
@@ -174,8 +174,8 @@ main {
   color: var(--brown-800);
 }
 .text-content .nutrition > hr {
-  border-color: var(--stone-150);
-  border-bottom: none;
+  border: 1px solid var(--stone-150);
+  border-bottom: 0;
   margin: var(--spacing-s) 0;
 }
 
